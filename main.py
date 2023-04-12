@@ -58,8 +58,8 @@ if(st.button('SUBMIT')):
 st.write(data)
 
 from PIL import Image
-image = Image.open(r'images\use.png')
-st.sidebar.image(image)
+# image = Image.open(r'images\use.png')
+# st.sidebar.image(image)
 
 
 st.sidebar.subheader(f"Hey {user_name}")
