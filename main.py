@@ -16,7 +16,7 @@ warnings.filterwarnings('ignore')
 
 
 # import some data to play with
-data = pd.read_csv(r'C:\Users\Dell\OneDrive\Desktop\DATA SCIENCE\Project\Streamlit Development\Model deployment\iris.data.csv', header = None)
+data = pd.read_csv('iris_data.csv', header = None)
 
 data.rename(columns = {0: 'sepal length (cm)', 1: 'sepal width (cm)', 2: 'petal length (cm)', 3:  'petal width (cm)', 4: 'names'}, inplace = True)
 
