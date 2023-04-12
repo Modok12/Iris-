@@ -16,7 +16,7 @@ warnings.filterwarnings('ignore')
 
 
 # import some data to play with
-data = pd.read_csv(r'C:\Users\Dell\OneDrive\Desktop\DATA SCIENCE\Project\Streamlit Development\Model deployment\iris.data.csv', header = None)
+data = pd.read_csv('iris_data.csv')
 
 data.rename(columns = {0: 'sepal length (cm)', 1: 'sepal width (cm)', 2: 'petal length (cm)', 3:  'petal width (cm)', 4: 'names'}, inplace = True)
 
@@ -58,8 +58,8 @@ if(st.button('SUBMIT')):
 st.write(data)
 
 from PIL import Image
-image = Image.open(r'images\use.png')
-st.sidebar.image(image)
+# image = Image.open(r'use.png')
+# st.sidebar.image(image)
 
 
 st.sidebar.subheader(f"Hey {user_name}")
@@ -96,14 +96,14 @@ pred = model.predict(input_values)
 
 
 if pred == 0:
-    st.success('The Flower is an Iris-setosa')
-    setosa = Image.open('images\Irissetosa1.JPG')
-    st.image(setosa, caption = 'Iris-setosa', width = 400)
+    st.success('The Flower is an f1')
+    setosa = Image.open('f1.JPG')
+    st.image(setosa, caption = 'SETOSA', width = 400)
 elif pred == 1:
-    st.success('The Flower is an Iris-versicolor ')
-    versicolor = Image.open('images\irisversicolor.JPG')
-    st.image(versicolor, caption = 'Iris-versicolor', width = 400)
+    st.success('The Flower is an f2 ')
+    versicolor = Image.open('f2.JPG')
+    st.image(versicolor, caption = 'VERSICOLOR', width = 400)
 else:
-    st.success('The Flower is an Iris-virginica ')
-    virginica = Image.open('images\Iris-virginica.JPG')
-    st.image(virginica, caption = 'Iris-virginica', width = 400 )
+    st.success('The Flower is an f3 ')
+    virginica = Image.open('f3.JPG')
+    st.image(virginica, caption = 'VIRGINICA', width = 400 )
